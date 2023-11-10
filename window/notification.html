@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notification</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+position: relative;
+        }
+
+        .welcome {
+            position: absolute;
+            margin: 10px;
+            background-color: rgb(127, 212, 127);
+            width: 90%;
+            text-align: center;
+            
+
+
+        }
+    </style>
+</head>
+
+<body>
+    
+    <script>
+        function showNotification(obj) {
+            let d = document.createElement("div");
+            d.innerHTML = obj.html;
+            d.className = obj.className;
+            d.style.top = `${obj.top}`;
+            d.style.right = `${obj.right}`;
+            document.body.insertAdjacentElement("beforebegin",d);
+            setTimeout(() => {
+            d.remove();
+        }, 2500);
+        }
+        showNotification({
+            top: 10, // 10px from the top of the window (by default 0px)
+            right: 10, // 10px from the right edge of the window (by default 0px)
+            html: "Hello! this is a notification", // the HTML of notification
+            className: "welcome" // an additional class for the div (optional)
+           
+        });
+       
+    </script>
+</body>
+
+</html>

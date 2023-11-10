@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>events</title>
+
+    <style>
+        #mouse {
+            background-color: rgb(146, 196, 146);
+            width: 300px;
+            height: 200px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            margin-top: 20px;
+
+        }
+
+        .ev {
+            border: 2px solid red;
+            padding: 4px;
+            /* user-select: none; */
+        }
+    </style>
+</head>
+
+<body>
+    <p>this page will deal with borwser events</p>
+    <!-- <input value="click me" onclick="alert('Click!')" type="button" style="cursor: pointer;" id="btn"> -->
+    <input value="click me" id="btn" type="button">
+
+    <div id="mouse" class="parnet ev">
+        <p>parnet</p>
+        <div class="inner1 ev">
+            <p>inner1</p>
+            <div class="inner2 ev">
+                <p>inner2</p>
+            </div>
+        </div>
+    </div>
+
+    <button class="custom" value="submit" style="margin-top: 20px;" id="custom">click</button>
+
+    <div id="nonSelect" oncopy="return false" ondblclick="return false" onselect="return false">not sele</div>
+
+    <form action="">
+
+        <input type="text" name="fname" value="vikas" class="in">
+        <input type="text" name="sname" value="kumar" class="in">
+        <select name="" id="select" multiple>
+            <option value="apple">Apple</option>
+            <option value="pear">Pear</option>
+            <option value="banana">Banana</option>
+        </select>
+    </form>
+
+    <div id="view" class="view">Text to be editable</div>
+
+    <!-- <script src="event.js"></script> -->
+    <!-- <script src="bubbling.js"></script> -->
+    <!-- <script src="custom.js"></script> -->
+    <!-- <script src="mouseevent.js"></script> -->
+    <!-- <script src="forms.js"></script> -->
+    <script src="focus_blur.js"></script>
+</body>
+
+</html>
